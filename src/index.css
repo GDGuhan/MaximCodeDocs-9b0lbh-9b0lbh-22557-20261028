@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+
+    --primary: 225 60% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 74% 50%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 43 74% 50%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 85%;
+    --input: 220 20% 85%;
+    --ring: 225 60% 20%;
+
+    --radius: 0.5rem;
+
+    /* Brand colors */
+    --navy: 225 60% 20%;
+    --navy-light: 225 50% 30%;
+    --royal-blue: 220 80% 45%;
+    --gold: 43 74% 50%;
+    --gold-light: 43 90% 65%;
+    --gold-dark: 38 70% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Certificate & Document Specific Styles */
+.certificate-font {
+  font-family: 'Cinzel', serif;
+}
+
+.body-font {
+  font-family: 'Inter', sans-serif;
+}
+
+.playfair-font {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  body {
+    background: white;
+  }
+}
+
+/* QR & document utilities */
+.doc-shadow {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.gold-text {
+  color: hsl(43, 74%, 45%);
+}
+
+.navy-text {
+  color: hsl(225, 60%, 20%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(220, 15%, 93%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(225, 60%, 20%);
+  border-radius: 3px;
+}
